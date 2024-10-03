@@ -1,0 +1,16 @@
+name: Trivy Scan
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  call-trivy-scan:
+    uses: rajapandi1234/kattu/.github/workflows/trivy.yml@master
+    with:
+      service_location: 'mosip-compliance-toolkit'
+      version: 'latest'
+      service_name: 'CTK'
+    secrets:
+      dev_namespace_docker_hub: ${{ secrets.dev_namespace_docker_hub }}
