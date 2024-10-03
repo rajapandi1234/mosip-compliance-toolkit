@@ -11,6 +11,6 @@ jobs:
     with:
       service_location: 'mosip-compliance-toolkit'
       version: 'latest'
-      service_name: 'CTK'
+      service_name: 'mosip-compliance-toolkit'
     secrets:
       dev_namespace_docker_hub: ${{ secrets.dev_namespace_docker_hub }}
